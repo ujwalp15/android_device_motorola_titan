@@ -29,9 +29,14 @@ TARGET_OTA_ASSERT_DEVICE := titan,titan_umts,titan_udstv,titan_umtsds,titan_reta
 # Board
 TARGET_BOARD_INFO_FILE := device/motorola/titan/board-info.txt
 
+# kernel stuff
+ifneq ($(strip $(USE_SABER_INLINE_KERNEL_BUILDING)),true)
+TARGET_KERNEL_CONFIG := titan_defconfig
+TARGET_KERNEL_SOURCE := kernel/motorola/msm8226
+endif
+
 # Kernel
 BOARD_CUSTOM_BOOTIMG_MK := $(LOCAL_PATH)/mkbootimg.mk
-TARGET_KERNEL_CONFIG := titan_defconfig
 
 # Partitions
 BOARD_BOOTIMAGE_PARTITION_SIZE := 10444800
