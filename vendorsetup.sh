@@ -1,2 +1,2 @@
-add_lunch_combo px_titan-userdebug
-add_lunch_combo px_titan-eng
+add_lunch-combo px_titan-userdebug
+add_lunch-combo px_titan-eng
